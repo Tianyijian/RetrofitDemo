@@ -1,11 +1,13 @@
 package com.android.retrofitdemo.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.retrofitdemo.R;
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private Button login;
     private EditText et_username;
     private EditText et_pwd;
+    private TextView tv_change_pwd;
+    private TextView tv_forget_pwd;
+    private User user;
     String TAG = "MainActivity";
 
     @Override
@@ -33,11 +38,31 @@ public class MainActivity extends AppCompatActivity {
         login = (Button)findViewById(R.id.login);
         et_username = (EditText)findViewById(R.id.et_username);
         et_pwd = (EditText)findViewById(R.id.et_pwd);
+        tv_change_pwd = (TextView)findViewById(R.id.tv_change_pwd);
+        tv_forget_pwd = (TextView)findViewById(R.id.tv_forget_pwd);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                login();
+            }
+        });
+        tv_change_pwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (user==null) {
+                    Toast.makeText(MainActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(MainActivity.this, ChangePwdActivity.class);
+                    intent.putExtra("user", user);
+                    startActivity(intent);
+                }
+            }
+        });
+        tv_forget_pwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
@@ -60,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
             if (value.getStatus() == Result.SUCCESS) {
                 Toast.makeText(MainActivity.this, value.getRemark(), Toast.LENGTH_SHORT).show();
                 Toast.makeText(MainActivity.this, value.getData().toString(), Toast.LENGTH_SHORT).show();
+                user = value.getData();
                 //TODO 登陆成功，跳转到主界面
             } else if (value.getStatus() == Result.ERROR) {
                 Toast.makeText(MainActivity.this, value.getRemark(), Toast.LENGTH_SHORT).show();
