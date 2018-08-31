@@ -23,4 +23,9 @@ public interface ApiService {
     @POST("authority/changePwd.action")
     Observable<Result<String>> changePwd(@Query("userId") Integer userId, @Query("oldPwd") String oldPwd, @Query("newPwd") String newPwd);
 
+    @POST("authority/resetPwd.action")
+    Observable<Result> resetPwd(@Query("userInfo") String userInfo, @Query("newPwd") String newPwd);
+
+    @POST("authority/signUp.action")
+    Observable<Result<User>> signUp(@Query("userPhone") String userPhone);
 }

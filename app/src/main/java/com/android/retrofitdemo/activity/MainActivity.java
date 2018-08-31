@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_pwd;
     private TextView tv_change_pwd;
     private TextView tv_forget_pwd;
+    private TextView tv_phone_login;
     private User user;
     String TAG = "MainActivity";
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         et_pwd = (EditText)findViewById(R.id.et_pwd);
         tv_change_pwd = (TextView)findViewById(R.id.tv_change_pwd);
         tv_forget_pwd = (TextView)findViewById(R.id.tv_forget_pwd);
+        tv_phone_login = (TextView)findViewById(R.id.tv_phone_login);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +64,15 @@ public class MainActivity extends AppCompatActivity {
         tv_forget_pwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, ForgetPwdActivity.class);
+                startActivity(intent);
+            }
+        });
+        tv_phone_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
     }

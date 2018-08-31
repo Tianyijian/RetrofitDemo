@@ -89,4 +89,11 @@ public class RetrofitClient {
     public void changePwd(Integer userId, String oldPwd, String newPwd, Observer<Result<String>> observer) {
         apiService.changePwd(userId, oldPwd, newPwd).compose(observableTransformer()).subscribe(observer);
     }
+
+    public void resetPwd(String userInfo, String newPwd, Observer<Result> observer) {
+        apiService.resetPwd(userInfo, newPwd).compose(observableTransformer()).subscribe(observer);
+    }
+    public void signUp(String userPhone, Observer<Result<User>> observer) {
+        apiService.signUp(userPhone).compose(observableTransformer()).subscribe(observer);
+    }
 }
