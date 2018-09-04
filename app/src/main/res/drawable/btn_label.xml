@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+
+            <padding
+                android:left="8dp"
+                android:top="3dp"
+                android:right="8dp"
+                android:bottom="3dp" />
+            <!--边框颜色-->
+            <stroke android:color="@color/blue"
+                android:width="1dp"/>
+        </shape>
+    </item>
+    <item >
+        <shape android:shape="rectangle">
+            <padding
+                android:left="8dp"
+                android:top="3dp"
+                android:right="8dp"
+                android:bottom="3dp" />
+            <!--边框颜色-->
+            <stroke android:color="#88a7a7a7"
+                android:width="1dp"/>
+        </shape>
+    </item>
+</selector>

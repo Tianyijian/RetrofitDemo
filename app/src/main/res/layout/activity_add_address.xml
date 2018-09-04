@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="联系人"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:textSize="@dimen/textSize"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="0dp"
+            android:hint="姓名"
+            android:layout_weight="4"
+            android:singleLine="true"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/textSizeSmall"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_label_men"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="先生"
+                android:textColor="@color/black"
+                android:clickable="true"
+                android:textSize="@dimen/textSizeSmall"
+                android:background="@drawable/btn_label"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_label_women"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="女士"
+                android:textColor="@color/black"
+                android:clickable="true"
+                android:textSize="@dimen/textSizeSmall"
+                android:background="@drawable/btn_label"
+                android:gravity="center"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#aacacaca"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="0dp"
+            android:text="电话"
+            android:gravity="left|center"
+            android:textSize="@dimen/textSize"
+            android:layout_weight="1"
+            android:id="@+id/text_phone"
+            android:textColor="@color/black"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@null"
+            android:hint="电话号码"
+            android:singleLine="true"
+            android:textSize="@dimen/textSizeSmall" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#aacacaca"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="0dp"
+            android:text="地址"
+            android:gravity="left|center"
+            android:textSize="@dimen/textSize"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_addr_info"
+            android:layout_width="0dp"
+            android:text="地址"
+            android:gravity="left|center"
+            android:textSize="@dimen/textSizeSmall"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_chevron_right_black_48dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#aacacaca"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="0dp"
+            android:text="门牌号"
+            android:gravity="left|center"
+            android:textSize="@dimen/textSize"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/et_house"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:background="@null"
+            android:hint="例如：5号楼203室"
+            android:textSize="@dimen/textSizeSmall"
+            android:layout_height="match_parent"  />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#aacacaca"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="0dp"
+            android:text="标签"
+            android:gravity="left|center"
+            android:textSize="@dimen/textSize"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_label_home"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="家"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textSize="@dimen/textSizeSmall"
+                android:clickable="true"
+                android:background="@drawable/btn_label"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_label_company"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="公司"
+                android:textColor="@color/black"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:textSize="@dimen/textSizeSmall"
+                android:background="@drawable/btn_label"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_label_school"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="学校"
+                android:textColor="@color/black"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:textSize="@dimen/textSizeSmall"
+                android:background="@drawable/btn_label"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#aacacaca"
+        android:layout_height="1dp"/>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="确 定"
+        android:textSize="@dimen/textSize"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
