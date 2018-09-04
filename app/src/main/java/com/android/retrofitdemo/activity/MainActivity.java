@@ -96,7 +96,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, value.getRemark(), Toast.LENGTH_SHORT).show();
                 Toast.makeText(MainActivity.this, value.getData().toString(), Toast.LENGTH_SHORT).show();
                 user = value.getData();
-                //TODO 登陆成功，跳转到主界面
+                Intent intent = new Intent(MainActivity.this, AddAddressActivity.class);
+                intent.putExtra("user", user);
+                startActivity(intent);
             } else if (value.getStatus() == Result.ERROR) {
                 Toast.makeText(MainActivity.this, value.getRemark(), Toast.LENGTH_SHORT).show();
             }

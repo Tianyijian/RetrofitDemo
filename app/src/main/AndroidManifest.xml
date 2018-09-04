@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".activity.ChangePwdActivity" />
         <activity android:name=".activity.ForgetPwdActivity" />
-        <activity android:name=".activity.SignUpActivity"></activity>
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.AddAddressActivity"></activity>
     </application>
 
 </manifest>

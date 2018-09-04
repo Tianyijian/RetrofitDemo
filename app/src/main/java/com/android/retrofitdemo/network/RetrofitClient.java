@@ -4,8 +4,11 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import com.android.retrofitdemo.bean.User;
+import com.android.retrofitdemo.bean.UserAddress;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
@@ -95,5 +98,11 @@ public class RetrofitClient {
     }
     public void signUp(String userPhone, Observer<Result<User>> observer) {
         apiService.signUp(userPhone).compose(observableTransformer()).subscribe(observer);
+    }
+    public void getUserAddress(int userId, Observer<Result<List<UserAddress>>> observer) {
+        apiService.getUserAddress(userId).compose(observableTransformer()).subscribe(observer);
+    }
+    public void addUserAddress(Map<String, Object> map, Observer<Result> observer) {
+        apiService.addUserAddress(map).compose(observableTransformer()).subscribe(observer);
     }
 }
